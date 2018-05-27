@@ -1,6 +1,6 @@
 APP_VERSION = $(shell cat version.txt)
 IMAGE_NAME = nathamanath/elixir_build
-REGISTRY_URL = registry.oneplaceapp.com
+REGISTRY_URL = $(shell cat registry.txt)
 
 build:
 	docker build --no-cache -t $(IMAGE_NAME) .
